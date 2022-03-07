@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <title>Neural-Syntax</title>
+    <meta name="description" content="Lithium Description" />
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <link href="css/plugins.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="css/application.css" media="screen" rel="stylesheet" type="text/css" />
+  </head>
+
+<body>
+
+    <!-- ABOUT -->
+
+    <section id="page-about" class="section">
+      <div align="center" style="padding-bottom: 100px;">
+        <p class="copy-02">CVPR 2022</p>
+        <p class="heading h-01">Neural Data-Dependent Transform<br>for Learned Image Compression</p>
+
+        <p class="copy-02">
+          <a href="https://dezhao-wang.github.io/">Dezhao Wang</a> &nbsp;&nbsp;&nbsp;
+          <a href="https://flyywh.github.io/">Wenhan Yang</a> &nbsp;&nbsp;&nbsp;
+          <a href="https://huzi96.github.io/">Yueyu Hu</a> &nbsp;&nbsp;&nbsp;
+          <a href="https://www.icst.pku.edu.cn/struct/people/liujiaying.html">Jiaying Liu</a>
+        </p>
+      </div>
+
+      <div class="site-inner">
+        <h3 class="heading h-03">Abstract</h3>
+        <div class="columns">
+          <aside>
+            <p class="copy-02"> Learned image compression has achieved great success due to its excellent modeling capacity, but seldom further considers the Rate-Distortion Optimization (RDO) of each input image. To explore this potential in the learned codec, we make the first attempt to build a neural data-dependent transform and introduce a continuous online mode decision mechanism to jointly optimize the coding efficiency for each individual image. Specifically, apart from the image content stream, we employ an additional model stream to generate the transform parameters at the decoder side. The presence of a model stream enables our model to learn more abstract neural-syntax, which helps cluster the latent representations of images more compactly. Beyond the transform stage, we also adopt neural-syntax based post-processing for the scenarios that require higher quality reconstructions regardless of extra decoding overhead. Moreover, the involvement of the model stream further makes it possible to optimize both the representation and the decoder in an online way, i.e. RDO at the testing time. It is equivalent to a continuous online mode decision, like coding modes in the traditional codecs, to improve the coding efficiency based on the individual input image. The experimental results show the effectiveness of the proposed neural-syntax design and the continuous online mode decision mechanism, demonstrating the superiority of our method in coding efficiency compared to the latest conventional standard Versatile Video Coding (VVC) and other state-of-the-art learning-based methods. </p>
+          </aside>
+          <aside>
+            <div align="center" style="padding-bottom:10px">
+              <img src="teasor.png" width=100%> <br>
+            </div>
+            <p class='copy-02' style="color:#888888"><b>Three transform paradigms.</b> <i>(a)</i> Single transform adopted in previous end-to-end trained image compression methods. <i>(b)</i> Cluster-specified transform utilized in conventional image codecs. <i>(c)</i> Proposed data-dependent transform. 
+            </p>
+            <br />
+            <br />
+            <div align="center" style="padding-bottom:10px">
+              <img src="step_by_step.png" width=100%> <br>
+            </div>
+            <p class='copy-02' style="color:#888888"><b>Key ideas with related formulations of image compression.</b> <i>(a)</i> Previous learned image compression. <i>(b)</i> Hybrid coding framework. <i>(c)</i> Our dual-stream learned image compression with the data-dependent transform. 
+            </p>
+          </aside>
+        </div>
+      </div>
+
+      <div class="site-inner" style="padding-top: 50px;">
+        <h3 class="heading h-03">Method</h3>
+
+        <div align="center" style="padding-top:20px;padding-bottom:10px">
+          <img src="framework.png" width=70%> <br>
+        </div>
+
+        <p class='copy-02'>Framework of our proposed data-dependent image compression method. Based on the baseline model [1], we further introduce model stream to extract data-specific description, <i>i.e.</i> <b>Neural-Syntax</b> (red lines in the figure). Neural-Syntax is then sent to the decoder side to generate the decoder weights.
+        </p>
+      </div>
+
+      <div class="site-inner" style="padding-top: 50px;">
+        <h3 class="heading h-03">Selected Experimental Results</h3>
+
+        <div align="center" style="padding-top:20px;padding-bottom:10px">
+          <img src="rd_curve.png" width=90%> <br>
+        </div>
+
+        <p align="center" class='copy-02'><b>R-D curves</b> on <i>Kodak</i> and <i>CLIC Professional Validation Set</i>.
+        </p>
+
+      </div>
+
+
+
+      <div class="site-inner" style="padding-top:50px;">
+        <p class="heading h-03"> Resources </p> 
+          <ul style="line-height:1.5; padding-left: 50px; padding-right: 50px">
+          　　<li class="copy-02"> Paper: To Update<!-- <a href="https://arxiv.org/abs/2104.01984">arXiv</a>--></li> 
+          　　<li class="copy-02"> Code: To Update<!-- <a href="https://github.com/daooshee/HLA-Face-Code">Github</a> --></li>
+          </ul>
+      </div>
+      
+
+      <div class="site-inner" style="padding-top:50px;">
+        <p class='heading h-03'> Citation</p>
+        <p class="copy-02"> To Update </p>
+        <!-- <p class="copy-02"> @InProceedings{ <br>
+          &nbsp; &nbsp; <br>
+        } <br> 
+        </p> -->
+      </div>
+
+      <div class="site-inner" style="padding-top:50px;">
+        <p class="heading h-03"> Resources </p> 
+          <p class="copy-02"> [1] Jooyoung Lee, Seunghyun Cho, and Seung-Kwon Beack, "Context adaptive entropy model for end-to-end optimized
+image compression", ICLR 2019.</p>
+      </div>
+
+
+    <section id="page-about" class="section">
+
+</body>
+</html>
