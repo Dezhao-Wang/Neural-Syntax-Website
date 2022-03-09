@@ -30,20 +30,27 @@
         </p>
       </div>
 
-      <div class="site-inner">
+      <div class="site-inner" style="padding-top: 50px;">
         <h3 class="heading h-03">Abstract</h3>
+
+        <p class='copy-02'>Learned image compression has achieved great success due to its excellent modeling capacity, but seldom further considers the Rate-Distortion Optimization (RDO) of each input image. To explore this potential in the learned codec, we make the first attempt to build a neural data-dependent transform and introduce a continuous online mode decision mechanism to jointly optimize the coding efficiency for each individual image. Specifically, apart from the image content stream, we employ an additional model stream to generate the transform parameters at the decoder side. The presence of a model stream enables our model to learn more abstract neural-syntax, which helps cluster the latent representations of images more compactly. Beyond the transform stage, we also adopt neural-syntax based post-processing for the scenarios that require higher quality reconstructions regardless of extra decoding overhead. Moreover, the involvement of the model stream further makes it possible to optimize both the representation and the decoder in an online way, i.e. RDO at the testing time. It is equivalent to a continuous online mode decision, like coding modes in the traditional codecs, to improve the coding efficiency based on the individual input image. The experimental results show the effectiveness of the proposed neural-syntax design and the continuous online mode decision mechanism, demonstrating the superiority of our method in coding efficiency compared to the latest conventional standard Versatile Video Coding (VVC) and other state-of-the-art learning-based methods.
+        </p>
+      </div>
+      <br>
+      <br>
+      <div class="site-inner">
+        <h3 class="heading h-03">Motivation</h3>
         <div class="columns">
           <aside>
-            <p class="copy-02"> Learned image compression has achieved great success due to its excellent modeling capacity, but seldom further considers the Rate-Distortion Optimization (RDO) of each input image. To explore this potential in the learned codec, we make the first attempt to build a neural data-dependent transform and introduce a continuous online mode decision mechanism to jointly optimize the coding efficiency for each individual image. Specifically, apart from the image content stream, we employ an additional model stream to generate the transform parameters at the decoder side. The presence of a model stream enables our model to learn more abstract neural-syntax, which helps cluster the latent representations of images more compactly. Beyond the transform stage, we also adopt neural-syntax based post-processing for the scenarios that require higher quality reconstructions regardless of extra decoding overhead. Moreover, the involvement of the model stream further makes it possible to optimize both the representation and the decoder in an online way, i.e. RDO at the testing time. It is equivalent to a continuous online mode decision, like coding modes in the traditional codecs, to improve the coding efficiency based on the individual input image. The experimental results show the effectiveness of the proposed neural-syntax design and the continuous online mode decision mechanism, demonstrating the superiority of our method in coding efficiency compared to the latest conventional standard Versatile Video Coding (VVC) and other state-of-the-art learning-based methods. </p>
-          </aside>
-          <aside>
             <div align="center" style="padding-bottom:10px">
-              <img src="teasor.png" width=100%> <br>
+              <img src="teasor.png" width=97%> <br>
             </div>
+            <br>
+            <br>
             <p class='copy-02' style="color:#888888"><b>Three transform paradigms.</b> <i>(a)</i> Single transform adopted in previous end-to-end trained image compression methods. <i>(b)</i> Cluster-specified transform utilized in conventional image codecs. <i>(c)</i> Proposed data-dependent transform. 
             </p>
-            <br />
-            <br />
+          </aside>
+          <aside>
             <div align="center" style="padding-bottom:10px">
               <img src="step_by_step.png" width=100%> <br>
             </div>
@@ -52,7 +59,7 @@
           </aside>
         </div>
       </div>
-
+      
       <div class="site-inner" style="padding-top: 50px;">
         <h3 class="heading h-03">Method</h3>
 
